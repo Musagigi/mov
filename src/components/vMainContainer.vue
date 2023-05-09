@@ -1,17 +1,25 @@
 <template>
-	<div class="main">
+	<vHeader></vHeader>
+	<main class="main">
 		<h2>{{ title }}</h2>
-	</div>
+		<vCatalog></vCatalog>
+	</main>
 </template>
 
 <script>
+import vHeader from "./vHeader.vue";
+import vCatalog from "./vCatalog.vue";
+
 export default {
 	name: "vMainContainer",
-	components: {},
+	components: {
+		vHeader,
+		vCatalog,
+	},
 	props: {},
 	data() {
 		return {
-			title: "Hello2",
+			title: "main",
 		};
 	},
 	computed: {},
