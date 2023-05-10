@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .catalog {
 	display: inline-block;
 	background-color: #f2f;

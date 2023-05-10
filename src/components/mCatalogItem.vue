@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .item {
 	background-color: #f11;
 }
