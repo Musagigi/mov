@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name: "vCatalogItem",
+	name: "mCatalogItem",
 	components: {},
 	props: {},
 	data() {

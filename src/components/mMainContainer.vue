@@ -1,20 +1,20 @@
 <template>
-	<vHeader></vHeader>
+	<mHeader></mHeader>
 	<main class="main">
 		<h2>{{ title }}</h2>
-		<vCatalog></vCatalog>
+		<mCatalog></mCatalog>
 	</main>
 </template>
 
 <script>
-import vHeader from "./vHeader.vue";
-import vCatalog from "./vCatalog.vue";
+import mHeader from "./mHeader.vue";
+import mCatalog from "./mCatalog.vue";
 
 export default {
-	name: "vMainContainer",
+	name: "mMainContainer",
 	components: {
-		vHeader,
-		vCatalog,
+		mHeader,
+		mCatalog,
 	},
 	props: {},
 	data() {

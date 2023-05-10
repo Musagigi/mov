@@ -1,17 +1,17 @@
 <template>
 	<section class="catalog">
 		<h2>{{ title }}</h2>
-		<vCatalogItem></vCatalogItem>
+		<mCatalogItem></mCatalogItem>
 	</section>
 </template>
 
 <script>
-import vCatalogItem from "./vCatalogItem.vue";
+import mCatalogItem from "./mCatalogItem.vue";
 
 export default {
-	name: "vCatalog",
+	name: "mCatalog",
 	components: {
-		vCatalogItem,
+		mCatalogItem,
 	},
 	props: {},
 	data() {

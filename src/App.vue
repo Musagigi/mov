@@ -1,14 +1,14 @@
 <template>
-	<vMainContainer></vMainContainer>
+	<mMainContainer></mMainContainer>
 </template>
 
 <script>
-import vMainContainer from "./components/vMainContainer.vue";
+import mMainContainer from "./components/mMainContainer.vue";
 
 export default {
 	name: "App",
 	components: {
-		vMainContainer,
+		mMainContainer,
 	},
 };
 </script>
