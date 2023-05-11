@@ -1,9 +1,13 @@
-$columns: 12;
-$offset: 30px;
-$offsetOneSide: ($offset / 2);
+$maxWidthBody: 1920px;
+$maxWidthContainer: 1152px;
+$mainFont: "PublicSans", sans-serif;
+$secondFont: "LibreBaskerville", sans-serif;
 $pathImg: "../img/";
 $colorWhite: #fff;
 $colorBlack: #000;
+$columns: 12;
+$offset: 30px;
+$offsetOneSide: 15px;
 
 // .offset(@offset) {
 

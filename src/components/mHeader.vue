@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 .header {
 	background-color: #fa2;
 }
