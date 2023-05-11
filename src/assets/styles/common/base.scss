@@ -62,36 +62,45 @@ ol {
 }
 
 body {
-	font-family: "Poppins", sans-serif;
-	font-family: "PT Serif", serif;
-	font-weight: 400;
-	font-size: 16px;
-	// color: $colorBlack;
-	max-width: 1440px;
-	margin: 0 auto;
-	background: #fafafa;
-}
-
-.body {
-	max-width: 1600px;
+	max-width: $maxWidthBody;
 	margin: 0 auto;
 	overflow-x: hidden;
+	font-family: $mainFont;
+	font-family: $secondFont;
+	font-weight: 400;
+	font-size: 16px;
+	color: $colorBlack;
 }
 
 .container {
+	max-width: $maxWidthContainer;
 	margin: 0 auto;
-	max-width: 960px;
-	// padding: 0 $offsetOneSide;
+	padding: 0 15px;
+}
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap: 32px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 @media screen and (max-width: 767px) {
+	html {
+		font-size: 8px;
+	}
+
 	.container {
-		// padding: 10px $offsetOneSide;
+		padding: 10px $offsetOneSide;
 	}
 }
 
 @media screen and (max-width: 321px) {
 	.container {
-		// padding: 10px ($offsetOneSide / 2);
+		padding: 10px $offsetOneSide / 2;
 	}
 }
