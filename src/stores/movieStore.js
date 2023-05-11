@@ -2,7 +2,14 @@ import { defineStore } from 'pinia'
 
 
 export const useMovieStore = defineStore('movieStore', {
-	state: () => ({
-		movies: []
-	})
+	state: () => {
+		return {
+			count: 0,
+			movies: [],
+			isTrue: true,
+		}
+
+	}
 })
+
+console.log(useMovieStore);
