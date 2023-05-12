@@ -1,6 +1,7 @@
 <template>
 	<header class="header">
 		<h2>{{ title }}</h2>
+		{{ movieStore.isTrue }}
 	</header>
 </template>
 
@@ -18,6 +19,11 @@ export default {
 	methods: {},
 	watch: {},
 };
+</script>
+
+<script setup>
+import { useMovieStore } from "../stores/movieStore";
+const movieStore = useMovieStore();
 </script>
 
 <style>

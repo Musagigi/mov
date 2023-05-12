@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import axios from 'axios';
+// import axios from 'axios';
 
 
 export const useMovieStore = defineStore({
@@ -13,5 +13,3 @@ export const useMovieStore = defineStore({
 
 	}
 })
-
-console.log(useMovieStore);
