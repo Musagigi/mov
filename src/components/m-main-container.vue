@@ -1,14 +1,13 @@
 <template>
-	<mHeader></mHeader>
+	<m-header></m-header>
 	<main class="main">
-		<h2>{{ title }}</h2>
-		<mCatalog></mCatalog>
+		<m-catalog></m-catalog>
 	</main>
 </template>
 
 <script>
-import mHeader from "./mHeader.vue";
-import mCatalog from "./mCatalog.vue";
+import mHeader from "./m-header.vue";
+import mCatalog from "./m-catalog.vue";
 
 export default {
 	name: "mMainContainer",
@@ -25,9 +24,7 @@ export default {
 	computed: {},
 	methods: {},
 	watch: {},
-	mounted() {
-		console.log("test");
-	},
+	mounted() {},
 };
 </script>
 

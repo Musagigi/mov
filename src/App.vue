@@ -1,9 +1,9 @@
 <template>
-	<mMainContainer></mMainContainer>
+	<m-main-container></m-main-container>
 </template>
 
 <script>
-import mMainContainer from "./components/mMainContainer.vue";
+import mMainContainer from "./components/m-main-container.vue";
 
 export default {
 	name: "App",
