@@ -28,8 +28,4 @@ export default {
 };
 </script>
 
-<style>
-.main {
-	background-color: #ff1;
-}
-</style>
+<style></style>
