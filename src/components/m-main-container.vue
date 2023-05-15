@@ -1,7 +1,7 @@
 <template>
-	<m-header></m-header>
+	<mHeader></mHeader>
 	<main class="main">
-		<m-catalog></m-catalog>
+		<mCatalog></mCatalog>
 	</main>
 </template>
 

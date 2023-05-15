@@ -13,7 +13,7 @@ export const useMovieStore = defineStore('movieStore', {
 		async getMovies() {
 			const response = await fetch(movieApi)
 			const data = await response.json()
-			console.log(data);
+			// console.log(data);
 			return this.movies = data
 		}
 	}

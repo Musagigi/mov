@@ -1,10 +1,9 @@
 <template>
 	<section class="catalog">
 		<h1 class="title">Фильмы</h1>
-		{{ movieStore.movies }}
-		<!-- <ul class="movies">
-			<li class="movies__item" v-for="movie in movies">
-				<a class="movies__link" href="">
+		<ul class="movies">
+			<li class="movies__item" v-for="movie in movies" :key="movie.pk">
+				<a class="movies__link" href="#">
 					<img
 						class="movies__img"
 						:src="movie.poster"
@@ -13,34 +12,21 @@
 					<h2 class="movies__name">{{ movie.title }}</h2>
 				</a>
 			</li>
-		</ul> -->
+		</ul>
 	</section>
 </template>
 
 <script setup>
 import { useMovieStore } from "../stores/movieStore";
-const movieStore = useMovieStore();
-movieStore.getMovies();
-</script>
-<!-- <script>
-import mCatalogItem from "./mCatalogItem.vue";
 
-export default {
-	name: "mCatalog",
-	components: {
-		mCatalogItem,
-	},
-	props: {},
-	data() {
-		return {
-			title: "catalog",
-		};
-	},
-	computed: {},
-	methods: {},
-	watch: {},
-};
-</script> -->
+function getMoviesInCatalog() {
+	const movieStore = useMovieStore();
+	movieStore.getMovies();
+	return movieStore.movies;
+}
+const movies = getMoviesInCatalog();
+// console.log(movies);
+</script>
 
 <style lang="scss">
 .title {
@@ -65,6 +51,7 @@ export default {
 }
 
 .movies__name {
+	color: #000;
 	text-align: left;
 	font-size: 14px;
 }
