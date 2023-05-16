@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { useMovieStore } from "../stores/movieStore";
+import { useMovieStore } from "@/stores/movieStore";
 
 function getMoviesInCatalog() {
 	const movieStore = useMovieStore();

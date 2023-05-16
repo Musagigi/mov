@@ -19,13 +19,13 @@ export const useMovieStore = defineStore('movieStore', () => {
 		localStorage.setItem('movies', JSON.stringify(state))
 	}, { deep: true })
 
-	console.log(movies);
+	// console.log(movies);
 
 	const moviesLocalStorage = localStorage.getItem('movies')
-	console.log(moviesLocalStorage);
+	// console.log(moviesLocalStorage);
 
 	if (moviesLocalStorage) {
-		console.log(JSON.parse(moviesLocalStorage));
+		// console.log(JSON.parse(moviesLocalStorage));
 		movies.value = JSON.parse(moviesLocalStorage)._value
 	}
 

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import mMainContainer from "./components/m-main-container.vue";
+import mMainContainer from "@/components/m-main-container.vue";
 
 export default {
 	name: "App",
