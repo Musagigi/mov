@@ -1,6 +1,8 @@
 <template>
 	<header class="header">
-		<nav class="header__navigate navigate">
+		<nav
+			class="header__navigate navigate"
+		>
 			<a
 				class="navigate__logo logo"
 				href="http://127.0.0.1:8000/"
@@ -34,7 +36,11 @@
 				</li>
 			</ul>
 		</nav>
-		<form class="header__form formSearch" action="#" method="POST">
+		<form
+			class="header__form formSearch"
+			action="#"
+			method="POST"
+		>
 			<input
 				class="formSearch__input"
 				name="search"

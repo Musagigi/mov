@@ -2,14 +2,23 @@
 	<section class="catalog">
 		<h1 class="title">Фильмы</h1>
 		<ul class="movies">
-			<li class="movies__item" v-for="movie in movies" :key="movie.pk">
-				<a class="movies__link" href="#">
+			<li
+				class="movies__item"
+				v-for="movie in movies"
+				:key="movie.pk"
+			>
+				<a
+					class="movies__link"
+					href="#"
+				>
 					<img
 						class="movies__img"
 						:src="movie.poster"
 						alt="постер фильма"
 					/>
-					<h2 class="movies__name">{{ movie.title }}</h2>
+					<h2 class="movies__name">
+						{{ movie.title }}
+					</h2>
 				</a>
 			</li>
 		</ul>
