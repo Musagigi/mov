@@ -15,9 +15,13 @@ export const useMovieStore = defineStore('movieStore', () => {
 		return movies.value = data
 	}
 
-	watch(() => movies, state => {
-		localStorage.setItem('movies', JSON.stringify(state))
-	}, { deep: true })
+	watch(
+		() => movies,
+		state => {
+			localStorage.setItem('movies', JSON.stringify(state))
+		},
+		{ deep: true }
+	)
 
 	// console.log(movies);
 

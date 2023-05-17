@@ -2,38 +2,32 @@
 	<section class="catalog">
 		<h1 class="title">Фильмы</h1>
 		<ul class="movies">
-			<li
-				class="movies__item"
-				v-for="movie in movies"
-				:key="movie.pk"
-			>
-				<a
-					class="movies__link"
-					href="#"
-				>
-					<img
-						class="movies__img"
-						:src="movie.poster"
-						alt="постер фильма"
-					/>
-					<h2 class="movies__name">
-						{{ movie.title }}
-					</h2>
-				</a>
-			</li>
+			<CatalogItem class="movies__item">
+				{{ images }}
+			</CatalogItem>
 		</ul>
 	</section>
 </template>
 
 <script setup>
-import { useMovieStore } from "@/stores/movieStore";
+// import { useMovieStore } from "@/stores/movieStore";
+import { CatalogItem } from "./m-catalog-item.vue";
+import { useImageStore } from "@/stores/imageStore";
 
-function getMoviesInCatalog() {
-	const movieStore = useMovieStore();
-	movieStore.getMovies();
-	return movieStore.movies;
+function getAllImagess() {
+	const imagesStore = useImageStore();
+	imagesStore.getImage();
+	return imagesStore.images;
 }
-const movies = getMoviesInCatalog();
+
+const images = getAllImagess();
+console.log(images);
+// function getMoviesInCatalog() {
+// 	const movieStore = useMovieStore();
+// 	movieStore.getMovies();
+// 	return movieStore.movies;
+// }
+// const movies = getMoviesInCatalog();
 // console.log(movies);
 </script>
 
