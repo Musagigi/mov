@@ -3,11 +3,10 @@
 		<h1 class="title">Фильмы</h1>
 		<ul class="movies">
 			<CatalogItem
-				v-for="image in test"
-				:key="image.id"
-				:imagee="iamge"
+				v-for="movie in moviesCatalog"
+				:key="movie.id"
+				:movies="movie"
 			>
-				<!-- <h2>{{ image.title }}</h2> -->
 			</CatalogItem>
 		</ul>
 	</section>
@@ -17,25 +16,14 @@
 	import CatalogItem from "./catalog-item.vue";
 	import { useImageStore } from "@/stores/imageStore";
 
-	const test = [
-		{
-			id: 1,
-			title: "test",
-		},
-		{
-			id: 2,
-			title: "test2",
-		},
-	];
+	function getAllImagess() {
+		const imagesStore = useImageStore();
+		imagesStore.getImage();
+		return imagesStore.images;
+	}
 
-	// function getAllImagess() {
-	// 	const imagesStore = useImageStore();
-	// 	imagesStore.getImage();
-	// 	return imagesStore.images;
-	// }
-
-	// const images = getAllImagess();
-	// console.log(images);
+	const moviesCatalog = getAllImagess();
+	// console.log(moviesCatalog);
 </script>
 
 <style lang="scss">

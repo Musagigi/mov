@@ -1,21 +1,21 @@
 <template>
 	<li class="item movies__item">
+		<img :src="movies.url" alt="" />
 		<h2>
-			{{ props }}
+			{{ movies.title }}
 		</h2>
 	</li>
 </template>
 
 <script setup>
 	const props = defineProps({
-		imagee: {
+		movies: {
 			type: Object,
 			required: true,
 		},
 	});
 
-	// const { image } = toRefs(props);
-	console.log(props);
+	console.log(props.movies);
 </script>
 
 <style>

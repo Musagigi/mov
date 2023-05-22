@@ -5,7 +5,7 @@
 		>
 			<a
 				class="navigate__logo logo"
-				href="http://127.0.0.1:8000/"
+				href="http://localhost:8080/"
 				title="На главную"
 			>
 				<svg
