@@ -5,23 +5,18 @@
 			<CatalogItem
 				v-for="image in test"
 				:key="image.id"
+				:imagee="iamge"
 			>
-				<h2>{{ image.title }}</h2>
+				<!-- <h2>{{ image.title }}</h2> -->
 			</CatalogItem>
 		</ul>
 	</section>
 </template>
 
 <script setup>
-	// import { useMovieStore } from "@/stores/movieStore";
 	import CatalogItem from "./catalog-item.vue";
 	import { useImageStore } from "@/stores/imageStore";
 
-	function getAllImagess() {
-		const imagesStore = useImageStore();
-		imagesStore.getImage();
-		return imagesStore.images;
-	}
 	const test = [
 		{
 			id: 1,
@@ -32,8 +27,15 @@
 			title: "test2",
 		},
 	];
-	const images = getAllImagess();
-	console.log(images);
+
+	// function getAllImagess() {
+	// 	const imagesStore = useImageStore();
+	// 	imagesStore.getImage();
+	// 	return imagesStore.images;
+	// }
+
+	// const images = getAllImagess();
+	// console.log(images);
 </script>
 
 <style lang="scss">

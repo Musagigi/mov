@@ -1,16 +1,21 @@
 <template>
 	<li class="item movies__item">
-		<h2 v-bind="props">
-			{{ props.title }}
+		<h2>
+			{{ props }}
 		</h2>
 	</li>
 </template>
 
 <script setup>
 	const props = defineProps({
-		test: Object,
+		imagee: {
+			type: Object,
+			required: true,
+		},
 	});
-	console.log(props.test);
+
+	// const { image } = toRefs(props);
+	console.log(props);
 </script>
 
 <style>
