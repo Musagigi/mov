@@ -14,8 +14,10 @@ export const useImageStore = defineStore('imageStore', () => {
 				for (let i = 0; i != 50; i++) {
 					images.value.push(data[i])
 				}
-				return images.value
 			})
 	}
-	return { images, getImage }
+
+	getImage()
+
+	return { images }
 })

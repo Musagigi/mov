@@ -18,7 +18,6 @@
 
 	function getAllImagess() {
 		const imagesStore = useImageStore();
-		imagesStore.getImage();
 		return imagesStore.images;
 	}
 
