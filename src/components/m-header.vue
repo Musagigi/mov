@@ -51,21 +51,7 @@
 	</header>
 </template>
 
-<script>
-	export default {
-		name: "mHeader",
-		components: {},
-		props: {},
-		data() {
-			return {
-				title: "header",
-			};
-		},
-		computed: {},
-		methods: {},
-		watch: {},
-	};
-</script>
+<script setup></script>
 
 <style>
 	.header {
