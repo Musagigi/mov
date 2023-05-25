@@ -1,18 +1,15 @@
 <template>
-	<mHeader></mHeader>
 	<main class="main">
-		<MovieCatalog></MovieCatalog>
+		<movie-catalog></movie-catalog>
 	</main>
 </template>
 
 <script>
-	import mHeader from "./m-header.vue";
-	import MovieCatalog from "./movie-catalog.vue";
+	import MovieCatalog from "./MovieCatalog.vue";
 
 	export default {
-		name: "mMainContainer",
+		name: "MovieMain",
 		components: {
-			mHeader,
 			MovieCatalog,
 		},
 		props: {},

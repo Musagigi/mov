@@ -1,15 +1,15 @@
 <template>
-	<m-main-container></m-main-container>
 	<router-view></router-view>
+	<movie-page></movie-page>
 </template>
 
 <script>
-	import mMainContainer from "@/components/m-main-container.vue";
+	import MoviePage from "@/components/MoviePage.vue";
 
 	export default {
 		name: "App",
 		components: {
-			mMainContainer,
+			MoviePage,
 		},
 	};
 </script>

@@ -1,21 +1,38 @@
-import { useRouter, useRoute, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import App from '@/App.vue'
-import MovieCatalog from '@/components/movie-catalog.vue'
-// import CatalogItem from '@/components'
+import MoviePage from '@/components/MoviePage.vue'
+import MovieMovies from '@/components/MovieMovies.vue'
+import MovieAbout from '@/components/MovieAbout.vue'
+import MovieCatalogItem from '@/components/MovieCatalogItem.vue'
 
-export default {
-	setup() {
+const router = createRouter({
+	history: createWebHistory(),
+	routes: [
+		{
+			path: '/',
+			name: 'home',
+			component: MoviePage,
+			sensitive: true
+		},
+		{
+			path: '/movies',
+			name: 'movies',
+			component: MovieMovies,
+			sensitive: true
+		},
+		{
+			path: '/about',
+			name: 'about',
+			component: MovieAbout,
+			sensitive: true
+		},
+		{
+			path: '/movies/movie',
+			name: 'movieCatalogItem',
+			component: MovieCatalogItem,
+			sensitive: true
+		},
+	],
+})
 
-		const history = createWebHistory()
-
-		const routes = [
-			{ path: '/', component: App, sensitive: true },
-			{ path: '/movie', component: MovieCatalog, sensitive: true },
-		]
-
-		const router = useRouter()
-		const route = useRoute()
-
-
-	}
-}
+export default router

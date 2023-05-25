@@ -2,18 +2,18 @@
 	<section class="catalog">
 		<h1 class="title">Фильмы</h1>
 		<ul class="movies">
-			<CatalogItem
+			<movie-catalog-item
 				v-for="movie in moviesCatalog"
 				:key="movie.id"
 				:movies="movie"
 			>
-			</CatalogItem>
+			</movie-catalog-item>
 		</ul>
 	</section>
 </template>
 
 <script setup>
-	import CatalogItem from "./catalog-item.vue";
+	import MovieCatalogItem from "./MovieCatalogItem.vue";
 	import { useImageStore } from "@/stores/imageStore";
 
 	function getAllImagess() {
