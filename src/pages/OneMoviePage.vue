@@ -1,10 +1,10 @@
 <template>
-	<movie-main-page></movie-main-page>
+	<movie-page-layout></movie-page-layout>
 	<h1>
 		OneMovie: {{ $route.params.id }}
 	</h1>
 </template>
 
 <script setup>
-	import MovieMainPage from "@/components/MovieMainPage.vue";
+	import MoviePageLayout from "@/components/MoviePageLayout.vue";
 </script>

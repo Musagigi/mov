@@ -1,8 +1,9 @@
 <template>
-	<movie-main-page></movie-main-page>
-	<h1>Home</h1>
+	<movie-page-layout></movie-page-layout>
+	<movie-catalog></movie-catalog>
 </template>
 
 <script setup>
-	import MovieMainPage from "@/components/MovieMainPage.vue";
+	import MoviePageLayout from "@/components/MoviePageLayout.vue";
+	import MovieCatalog from "@/components/MovieCatalog.vue";
 </script>

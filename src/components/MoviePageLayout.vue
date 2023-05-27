@@ -6,4 +6,6 @@
 	import MovieHeader from "./MovieHeader.vue";
 </script>
 
-<style></style>
+<style lang="scss">
+	@import "@/assets/css/main.scss";
+</style>
