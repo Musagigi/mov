@@ -1,6 +1,8 @@
 <template>
 	<movie-main-page></movie-main-page>
-	<h1>Home</h1>
+	<h1>
+		OneMovie: {{ $route.params.id }}
+	</h1>
 </template>
 
 <script setup>

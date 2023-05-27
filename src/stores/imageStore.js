@@ -20,4 +20,4 @@ export const useImageStore = defineStore('imageStore', () => {
 	getImage()
 
 	return { images }
-})
+}) 

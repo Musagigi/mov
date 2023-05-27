@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import App from '@/App.vue'
-import MoviePage from '@/components/MoviePage.vue'
-import MovieMovies from '@/components/MovieMovies.vue'
-import MovieAbout from '@/components/MovieAbout.vue'
-import MovieCatalogItem from '@/components/MovieCatalogItem.vue'
+import HomePage from '@/pages/HomePage.vue'
+import AboutPage from '@/pages/AboutPage.vue'
+import MoviesPage from '@/pages/MoviesPage.vue'
+import OneMoviePage from '@/pages/OneMoviePage.vue'
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -11,27 +10,27 @@ const router = createRouter({
 		{
 			path: '/',
 			name: 'home',
-			component: MoviePage,
-			sensitive: true
-		},
-		{
-			path: '/movies',
-			name: 'movies',
-			component: MovieMovies,
+			component: HomePage,
 			sensitive: true
 		},
 		{
 			path: '/about',
 			name: 'about',
-			component: MovieAbout,
+			component: AboutPage,
 			sensitive: true
 		},
 		{
-			path: '/movies/movie',
-			name: 'movieCatalogItem',
-			component: MovieCatalogItem,
+			path: '/movies',
+			name: 'movies',
+			component: MoviesPage,
 			sensitive: true
 		},
+		{
+			path: '/movie/:id',
+			name: 'OneMoviePage',
+			component: OneMoviePage,
+			sensitive: true
+		}
 	],
 })
 
