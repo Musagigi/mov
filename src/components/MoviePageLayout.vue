@@ -1,5 +1,6 @@
 <template>
-	<MovieHeader></MovieHeader>
+	<movie-header></movie-header>
+	<slot></slot>
 </template>
 
 <script setup>

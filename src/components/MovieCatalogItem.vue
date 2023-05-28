@@ -1,6 +1,10 @@
 <template>
 	<li class="item movies__item">
-		<img :src="movies.url" alt="" />
+		<router-link
+			:to="`/movie/${movies.id}`"
+		>
+			<img :src="movies.url" alt="" />
+		</router-link>
 		<h2>
 			{{ movies.title }}
 		</h2>

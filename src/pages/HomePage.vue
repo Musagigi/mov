@@ -1,6 +1,7 @@
 <template>
-	<movie-page-layout></movie-page-layout>
-	<movie-catalog></movie-catalog>
+	<movie-page-layout>
+		<movie-catalog></movie-catalog>
+	</movie-page-layout>
 </template>
 
 <script setup>
