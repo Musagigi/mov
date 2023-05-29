@@ -14,18 +14,17 @@
 
 <script setup>
 	import MovieCatalogItem from "./MovieCatalogItem.vue";
-	import { useImageStore } from "@/stores/imageStore";
+	import { useMovieStore } from "@/stores/movieStore";
 
 	function getAllImagess() {
-		const imagesStore = useImageStore();
-		return imagesStore.images;
+		const movieStore = useMovieStore();
+		return movieStore.movies;
 	}
 
 	const moviesCatalog = getAllImagess();
-	// console.log(moviesCatalog);
 </script>
 
-<style lang="scss">
+<style>
 	.title {
 		text-align: center;
 		padding: 10px 15px;

@@ -1,6 +1,10 @@
 <template>
-	<movie-header></movie-header>
-	<slot></slot>
+	<div class="container">
+		<movie-header></movie-header>
+		<main>
+			<slot> </slot>
+		</main>
+	</div>
 </template>
 
 <script setup>

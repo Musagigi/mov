@@ -1,9 +1,12 @@
 <template>
-	<li class="item movies__item">
+	<li class="movies-item">
 		<router-link
 			:to="`/movie/${movies.id}`"
 		>
-			<img :src="movies.url" alt="" />
+			<img
+				:src="movies.poster"
+				alt=""
+			/>
 		</router-link>
 		<h2>
 			{{ movies.title }}
@@ -27,7 +30,7 @@
 		background-color: #f11;
 	}
 
-	.movies__item {
+	.movies-item {
 		display: block;
 		max-width: calc((100% / 6) - 10px);
 		margin: 5px;

@@ -7,13 +7,16 @@ const movieApi = 'http://127.0.0.1:8000/api/movies/'
 export const useMovieStore = defineStore('movieStore', () => {
 
 	const movies = ref([])
+	const moviesLocalStorage = localStorage.getItem('movies')
 
 	async function getMovies() {
-		const response = await fetch(movieApi)
-		const data = await response.json()
-		// console.log(data);
-		return movies.value = data
+		return await fetch(movieApi)
+			.then(response => response.json())
+			.then(data => {
+				return movies.value = data
+			})
 	}
+	getMovies()
 
 	watch(
 		() => movies,
@@ -23,15 +26,10 @@ export const useMovieStore = defineStore('movieStore', () => {
 		{ deep: true }
 	)
 
-	// console.log(movies);
-
-	const moviesLocalStorage = localStorage.getItem('movies')
 	// console.log(moviesLocalStorage);
-
 	if (moviesLocalStorage) {
-		// console.log(JSON.parse(moviesLocalStorage));
 		movies.value = JSON.parse(moviesLocalStorage)._value
 	}
 
-	return { movies, getMovies }
+	return { movies }
 })
