@@ -78,12 +78,6 @@ body {
 	padding: 0 15px;
 }
 
-.gridContainer {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	column-gap: 32px;
-}
-
 .row {
 	display: flex;
 	flex-wrap: wrap;

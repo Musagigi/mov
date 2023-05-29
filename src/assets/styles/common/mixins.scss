@@ -1,23 +1,12 @@
-$maxWidthBody: 1920px;
-$maxWidthContainer: 1152px;
-$mainFont: "PublicSans", sans-serif;
-$secondFont: "LibreBaskerville", sans-serif;
-$pathImg: "../img/";
-$colorWhite: #fff;
-$colorBlack: #000;
-$columns: 12;
-$offset: 30px;
-$offsetOneSide: 15px;
-
-// .offset(@offset) {
-
-// }
-
-// .col ($val, $clmn: $columns, $ofse: $offset) {
-// 	$width: (100% / $clmn * $val);
-// 	width: calc(@width - @ofse);
-// 	word-wrap: break-word;
-// }
+@mixin col(
+	$val,
+	$column: $column,
+	$offset: $offset
+) {
+	$width: (100% / $clmn * $val);
+	width: calc($width - $ofse);
+	word-wrap: break-word;
+}
 
 // .maxWidth ($backImg: none, $backColor: none) {
 // 	&::before {
@@ -59,28 +48,4 @@ $offsetOneSide: 15px;
 // .sizeBtn(@small, @large) {
 // 	width: clamp(@small, 5vw, @large);
 // 	height: clamp(@small, 5vw, @large);
-// }
-
-.btnReset {
-	border: 0;
-	padding: 0;
-	background: transparent;
-	cursor: pointer;
-}
-
-.btn {
-	display: inline-block;
-	min-width: 180px;
-	border: 0;
-	padding: 20px 15px;
-	// border-radius: 30px;
-	// text-decoration: none;
-	text-align: center;
-	background-color: $colorWhite;
-}
-
-// .gradientText () {
-// 	background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
-// 	-webkit-text-fill-color: transparent;
-// 	-webkit-background-clip: text;
 // }
