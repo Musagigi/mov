@@ -1,51 +1,66 @@
-@mixin col(
-	$val,
-	$column: $column,
-	$offset: $offset
-) {
+@mixin col($val, $clmn, $ofst) {
 	$width: (100% / $clmn * $val);
-	width: calc($width - $ofse);
+	width: calc($width - $ofst);
 	word-wrap: break-word;
 }
 
-// .maxWidth ($backImg: none, $backColor: none) {
-// 	&::before {
-// 		content: "";
-// 		width: 100vw;
-// 		position: absolute;
-// 		top: 0;
-// 		right: 0;
-// 		bottom: 0;
-// 		left: calc((-100vw + 100%) / 2);
-// 		background-color: $backColor;
-// 		background: $backImg;
-// 		z-index: -1;
-// 	}
-// }
+@mixin maxWidth(
+	$backImg: none,
+	$backColor: none
+) {
+	&::before {
+		content: "";
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: calc((-100vw + 100%) / 2);
+		background-color: $backColor;
+		background: $backImg;
+		z-index: -1;
+	}
+}
 
-// .mouseDevise ($hoverColor: none, $hoverBgColor: none) {
-// 	@media (hover: hover) and (pointer: fine) {
-// 		color: $hoverColor;
-// 		background-color: $hoverBgColor;
-// 	}
-// }
+@mixin mouseDevise(
+	$hoverColor: none,
+	$hoverBgColor: none
+) {
+	@media (hover: hover) and (pointer: fine) {
+		color: $hoverColor;
+		background-color: $hoverBgColor;
+	}
+}
 
-// .fontSizeTitle($small, $large) {
-// 	font-size: clamp(@small, 10vw, @large);
-// }
+@mixin fontSizeTitle($small, $large) {
+	font-size: clamp(
+		$small,
+		10vw,
+		$large
+	);
+}
 
-// .lineHeightTitle($small, $large) {
-// 	line-height: clamp(@small, 12vw, @large);
-// }
+@mixin lineHeightTitle($small, $large) {
+	line-height: clamp(
+		$small,
+		12vw,
+		$large
+	);
+}
 
-// .fontStyle($fSize, $fWeight, $lHeight, $fColor: $colorBlack) {
-// 	font-size: $fSize;
-// 	font-weight: $fWeight;
-// 	line-height: $lHeight;
-// 	color: $fColor;
-// }
+@mixin fontStyle(
+	$fSize,
+	$fWeight,
+	$lHeight,
+	$fColor: $colorBlack
+) {
+	font-size: $fSize;
+	font-weight: $fWeight;
+	line-height: $lHeight;
+	color: $fColor;
+}
 
-// .sizeBtn(@small, @large) {
-// 	width: clamp(@small, 5vw, @large);
-// 	height: clamp(@small, 5vw, @large);
-// }
+@mixin sizeBtn($small, $large) {
+	width: clamp($small, 5vw, $large);
+	height: clamp($small, 5vw, $large);
+}

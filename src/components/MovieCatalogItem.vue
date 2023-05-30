@@ -26,7 +26,8 @@
 	console.log(props.movies);
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+	@import "@/assets/styles/main.scss";
 	.item {
 		background-color: #f11;
 	}
@@ -34,7 +35,7 @@
 	.movies-item {
 		display: block;
 		@include col(6, 12, 5px);
-		/* max-width: calc((100% / 6) - 10px);
-		margin: 5px; */
+		// max-width: calc((100% / 6) - 10px);
+		// margin: 5px;
 	}
 </style>
